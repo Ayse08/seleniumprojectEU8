@@ -14,12 +14,18 @@ public class BasicNavigations {
         // This is the line opening an empty browser
         WebDriver driver = new ChromeDriver();
 
+        // This line will maximize the browser size
+        driver.manage().window().maximize();
+
         //3- Go to "https://www.tesla.com"
         driver.get("https://www.tesla.com");
 
         // get the title of the page
         String currentTitle = driver.getTitle();
         System.out.println("currentTitle = " + currentTitle);
+
+        String currentURL = driver.getCurrentUrl();
+        System.out.println("currentURL = " + currentURL);
 
         //Stop code execution for 3 seconds
         Thread.sleep(3000);
@@ -52,7 +58,10 @@ public class BasicNavigations {
 
         System.out.println("currentTitle = " + currentTitle);
 
-        String currentURL = driver.getCurrentUrl();
+        // get the URL using selenium
+        currentURL = driver.getCurrentUrl();
+
+        System.out.println("currentURL = " + currentURL);
 
 
     }
