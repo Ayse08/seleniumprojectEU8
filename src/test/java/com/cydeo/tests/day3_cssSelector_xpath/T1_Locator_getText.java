@@ -27,7 +27,17 @@ public class T1_Locator_getText {
         inputUsername.sendKeys("incorrect");
 
         //4- Enter incorrect password: “incorrect”
+        // to auto generate local variable
+        // Mac: option + enter
+        //Windows: alt + enter
+
+        WebElement inputPassword = driver.findElement(By.name("USER_PASSWORD"));
+        inputPassword.sendKeys("incorrect");
+
         //5- Click to login button.
+        WebElement loginButton = driver.findElement(By.className("login-btn"));
+        loginButton.click();
+
         //6- Verify error message text is as expected:
         //Expected: Incorrect login or password
         //
