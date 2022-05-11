@@ -43,5 +43,13 @@ public class T5_checkBoxes {
         //7. Confirm checkbox #2 is NOT selected.
         System.out.println("checkbox2.isSelected(), expecting false = " + checkbox2.isSelected());
 
+        // We can also use if():
+
+        if (checkbox1.isSelected()){
+            System.out.println("verification passed");
+        }else{
+            System.out.println("verification failed");
+        }
+
     }
 }
