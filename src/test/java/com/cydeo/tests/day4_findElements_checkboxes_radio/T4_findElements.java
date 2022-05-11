@@ -1,8 +1,11 @@
 package com.cydeo.tests.day4_findElements_checkboxes_radio;
 
 import com.cydeo.utilities.WebDriverFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class T4_findElements {
@@ -20,11 +23,24 @@ public class T4_findElements {
         driver.get("https://practice.cydeo.com/abtest");
 
         //3- Locate all the links in the page.
-
+        //windows : alt + enter ---> press enter again
+        // mac: option + enter ----> press enter again
+        // write driver.findElements(By.tagName("a")) + option button + enter (introduce local variable)
+        List<WebElement> allLinks = driver.findElements(By.tagName("a"));
 
         //4- Print out the number of the links on the page.
-        //5- Print out the texts of the links.
-        //6- Print out the HREF attribute values of the links
+        System.out.println("allLinks.size() = " + allLinks.size());
+
+        //5- Print out the texts of the links. (iter + enter)
+        for (WebElement each : allLinks) {
+            // System.out.println("Text of link: " + each); // print only webElement type
+            System.out.println("Text of link: " + each.getText()); // getText() returns to a String and get the text
+            System.out.println("Href Values: " + each.getAttribute("href"));//6- Print out the HREF attribute values
+            // of the links
+        }
+            //6- Print out the HREF attribute values of the links
+
+   // shortcut= cmd + shift = move the line (don't need to cut and paste)
 
     }
 }
