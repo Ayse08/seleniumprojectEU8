@@ -60,9 +60,6 @@ public class T2_getText_getAttribute {
             System.out.println("Href attribute value verification FAILED!!!");
         }
 
-        //
-        //
-        //
         //PS: Inspect and decide which locator you should be using to locate web
         //elements.
 
