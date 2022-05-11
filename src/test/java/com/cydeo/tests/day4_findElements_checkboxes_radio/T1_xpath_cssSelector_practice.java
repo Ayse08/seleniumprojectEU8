@@ -49,10 +49,22 @@ public class T1_xpath_cssSelector_practice {
         // we can write what we want after pattern, for ex (from pattern value): 'a-z' or '0-9)
 
         //e. “Retrieve password” button
+        ////button[@type='submit']
+        //button[@class='radius']
+        WebElement retrievePasswordBtn = driver.findElement(By.xpath("//button[@id='form_submit']"));
+
         //f. “Powered by Cydeo text
-        //4. Verify all web elements are displayed.
+        WebElement poweredByCydeoTxt = driver.findElement(By.xpath("//div[@style='text-align: center;']"));
 
+        //4. Verify all web elements are displayed.  We can not do it for all but select only one
+        System.out.println("homeLink_ex1.isDisplayed() = " + homeLink_ex1.isDisplayed());
+        // we do it by: homelink_ex1.isDisplayed().soutv + enter
 
+        System.out.println("header_ex1.isDisplayed() = " + header_ex1.isDisplayed());
+        System.out.println("emailLabel.isDisplayed() = " + emailLabel.isDisplayed());
+        System.out.println("inputBox_ex1.isDisplayed() = " + inputBox_ex1.isDisplayed());
+        System.out.println("retrievePasswordBtn.isDisplayed() = " + retrievePasswordBtn.isDisplayed());
+        System.out.println("poweredByCydeoTxt.isDisplayed() = " + poweredByCydeoTxt.isDisplayed());
 
 
     }
