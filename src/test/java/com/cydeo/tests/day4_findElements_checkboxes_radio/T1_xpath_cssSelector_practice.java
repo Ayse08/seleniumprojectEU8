@@ -38,7 +38,7 @@ public class T1_xpath_cssSelector_practice {
         WebElement header_ex2 = driver.findElement(By.xpath("//h2[.='Forgot Password']"));
 
         //c. “E-mail” text
-        WebElement emailLabel = driver.findElement(By.xpath("//label@[for='email']"));
+        WebElement emailLabel = driver.findElement(By.xpath("//label[@for='email']"));
 
         //d. E-mail input box
         WebElement inputBox_ex1 = driver.findElement(By.xpath("//input[@name='email']"));
@@ -57,15 +57,14 @@ public class T1_xpath_cssSelector_practice {
         WebElement poweredByCydeoTxt = driver.findElement(By.xpath("//div[@style='text-align: center;']"));
 
         //4. Verify all web elements are displayed.  We can not do it for all but select only one
-        System.out.println("homeLink_ex1.isDisplayed() = " + homeLink_ex1.isDisplayed());
         // we do it by: homelink_ex1.isDisplayed().soutv + enter
-
+        System.out.println("homeLink_ex1.isDisplayed() = " + homeLink_ex1.isDisplayed());
         System.out.println("header_ex1.isDisplayed() = " + header_ex1.isDisplayed());
         System.out.println("emailLabel.isDisplayed() = " + emailLabel.isDisplayed());
         System.out.println("inputBox_ex1.isDisplayed() = " + inputBox_ex1.isDisplayed());
         System.out.println("retrievePasswordBtn.isDisplayed() = " + retrievePasswordBtn.isDisplayed());
         System.out.println("poweredByCydeoTxt.isDisplayed() = " + poweredByCydeoTxt.isDisplayed());
-
+        // All are "true"
 
     }
 }
