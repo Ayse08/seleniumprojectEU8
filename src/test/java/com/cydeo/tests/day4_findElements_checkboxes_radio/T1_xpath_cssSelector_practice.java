@@ -44,7 +44,9 @@ public class T1_xpath_cssSelector_practice {
         WebElement inputBox_ex1 = driver.findElement(By.xpath("//input[@name='email']"));
 
         //Locate inputBox using xpath contains method
-        WebElement inputBox_ex2 = driver.findElement(By.xpath("//input[@name='email']"));
+        //tagName[contains(@attribute,'value')]
+        WebElement inputBox_ex2 = driver.findElement(By.xpath("//input[contains(@pattern,'a-z')]"));
+        // we can write what we want after pattern, for ex (from pattern value): 'a-z' or '0-9)
 
         //e. “Retrieve password” button
         //f. “Powered by Cydeo text
