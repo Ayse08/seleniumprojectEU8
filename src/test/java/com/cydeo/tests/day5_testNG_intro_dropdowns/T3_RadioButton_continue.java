@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class T3_RadioButton_continue {
@@ -20,8 +21,27 @@ public class T3_RadioButton_continue {
         driver.get("https://practice.cydeo.com/radio_buttons");
 
         //3. Click to “Hockey” radio button
-        WebElement hockeyButton = driver.findElement(By.xpath("//input[@id='hockey']"));
-        hockeyButton.click();
+       //   WebElement hockeyButton = driver.findElement(By.xpath("//input[@id='hockey']"));
+      //  hockeyButton.click();
+
+        //Locate name='sport' radio buttons and store them in a List of Web Element
+        List<WebElement> sportRadioButtons = driver.findElements(By.name("sport"));
+
+        //Loop through the list of WebElement and select matching result "hockey"
+        for (WebElement each : sportRadioButtons) {
+
+            String eachId = each.getAttribute("id");
+            System.out.println("eachId = " + eachId);
+
+            if (eachId.equals("hockey")){
+
+                each.click();
+                System.out.println("Hockey is selected : " + each.isSelected());
+                break;  // we break the loop
+
+        }
+        }
+
 
 
         //4. Verify “Hockey” radio button is selected after clicking.
@@ -42,5 +62,30 @@ public class T3_RadioButton_continue {
         //
         //
 
+
+
+
+
     }
+
+    private static void clickAndVerifyRadioButton(WebDriver driver, String nameAttribute, String idValue){
+        List<WebElement> RadioButtons = driver.findElements(By.name("sport"));
+
+        //Loop through the list of WebElement and select matching result "hockey"
+        for (WebElement each : RadioButtons) {
+
+            String eachId = each.getAttribute("id");
+
+            if (eachId.equals("hockey")){
+
+                each.click();
+                System.out.println(eachId + " is selected : " + each.isSelected());
+                break;  // we break the loop
+
+            }
+        }
+
+    }
+
+
 }
