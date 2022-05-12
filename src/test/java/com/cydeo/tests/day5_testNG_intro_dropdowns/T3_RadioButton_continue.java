@@ -42,8 +42,6 @@ public class T3_RadioButton_continue {
         }
         }
 
-
-
         //4. Verify “Hockey” radio button is selected after clicking.
         //
         //USE XPATH LOCATOR FOR ALL WEBELEMENT LOCATORS
@@ -62,9 +60,9 @@ public class T3_RadioButton_continue {
         //
         //
 
-
-
-
+        clickAndVerifyRadioButton(driver, "sport", "hockey");
+        clickAndVerifyRadioButton(driver,"sport", "football");
+        clickAndVerifyRadioButton(driver, "color", "yellow");
 
     }
 
@@ -84,8 +82,5 @@ public class T3_RadioButton_continue {
 
             }
         }
-
     }
-
-
 }
