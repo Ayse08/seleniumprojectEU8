@@ -1,8 +1,14 @@
 package com.cydeo.tests.day5_testNG_intro_dropdowns;
 
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class TestNG_Intro {
+
+    @BeforeMethod
+    public void setUpMethod(){
+        System.out.println("----> BeforeMethod is running!");
+    }
 
     @Test // when we add @Test and tap enter it becomes runnable
     public void test1(){ // when we write this method only we can not run
