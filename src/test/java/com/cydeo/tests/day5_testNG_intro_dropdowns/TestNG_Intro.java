@@ -1,8 +1,35 @@
 package com.cydeo.tests.day5_testNG_intro_dropdowns;
 
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class TestNG_Intro {
+
+    @Test(priority = 1)
+    public void test1(){
+        System.out.println("Test1 is running!");
+
+        //ASSERT EQUALS : compare 2 of the same things
+
+        // Assert.assertEquals("actual", "actual");
+        // Or
+        String actual = "apple";
+        String expected = "apple";
+
+        Assert.assertEquals(actual, expected);
+
+    }
+
+    @Test(priority = 2)
+    public void test2(){
+        System.out.println("Test2 is running!");
+
+        // AssertTrue
+        String actual = "apple";
+        String expected = "apple";
+
+        Assert.assertTrue(actual.equals(expected));
+    }
 
     @BeforeClass
     public void setupMethod(){
@@ -24,14 +51,5 @@ public class TestNG_Intro {
         System.out.println("---> AfterMethod is running!");
     }
 
-    @Test (priority = 1)// when we add @Test and tap enter it becomes runnable
-    public void test1(){ // when we write this method only we can not run
-        System.out.println("Test 1 is running...");
-    }
-
-    @Test (priority = 2) // priority can change the running order, normally it runs in the alphabetic order
-    public void test2(){
-        System.out.println("Test 2 is running...");
-    }
 
 }
