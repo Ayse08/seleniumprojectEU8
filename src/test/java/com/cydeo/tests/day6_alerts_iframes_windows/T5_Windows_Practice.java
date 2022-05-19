@@ -48,16 +48,22 @@ public class T5_Windows_Practice {
 
     clickHereLink.click();
 
+    //6. Switch to new Window.
+    for (String each : driver.getWindowHandles()){
+
+        driver.switchTo().window(each);
+        System.out.println("Current title while switching windows: " + driver.getTitle());
+    }
+
+    //7. Assert: Title is “New Window”
+    String expectedTitleAfterClick = "New Window";
     actualTitle = driver.getTitle();
+
+    Assert.assertEquals(actualTitle, expectedTitleAfterClick);
 
     System.out.println("Title after click: " + actualTitle);
 
-    //6. Switch to new Window.
-    //7. Assert: Title is “New Window”
-
-
 }
-
 
 }
 
