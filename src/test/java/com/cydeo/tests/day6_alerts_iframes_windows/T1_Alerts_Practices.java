@@ -55,12 +55,7 @@ public class T1_Alerts_Practices {
     }
 
 
-
-
-
 }
-
-
 
 //
 //TC #2: Confirmation alert practice
