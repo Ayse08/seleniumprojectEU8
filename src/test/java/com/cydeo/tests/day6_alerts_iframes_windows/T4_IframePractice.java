@@ -41,10 +41,20 @@ public class T4_IframePractice {
 
         Assert.assertTrue(yourContentGoesHereText.isDisplayed());
 
+        //5. Assert: “An iFrame containing the TinyMCE WYSIWYG Editor”
+        // to be able to verify the header, we must switch back to "main HTML"
+
+        driver.switchTo().parentFrame();
+
+        WebElement headerText = driver.findElement(By.xpath("//h3"));
+
+        //assertion of header test is displayed or not
+        Assert.assertTrue(headerText.isDisplayed());
 
     }
 
-    //5. Assert: “An iFrame containing the TinyMCE WYSIWYG Editor”
+
+
 
 
 
