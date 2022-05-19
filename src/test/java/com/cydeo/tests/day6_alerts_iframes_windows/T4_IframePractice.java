@@ -27,14 +27,20 @@ public class T4_IframePractice {
         driver.get("https://practice.cydeo.com/iframe");
     }
 
-    //4. Assert: “Your content goes here.” Text is displayed.
-    @Test
+    // @Ignore // first way to ignore the test
+    @Test // second way to skip: put // before @Test
     public void iframe_test(){
-
+        //4. Assert: “Your content goes here.” Text is displayed.
         // We need to switch otherwise : "NoSuchElement" exception
         //We need to switch driver's focus to iframe
         // option#1- switching to iframe using id attribute value
-        driver.switchTo().frame("mce_0_ifr");
+        //driver.switchTo().frame("mce_0_ifr");
+
+        //option #2- passing index number of iframe
+        //driver.switchTo().frame(0);
+
+        // option #3- locate as web element and pass in frame() method
+        driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='mce_0_ifr']")));
 
         //Locate the p tag
         WebElement yourContentGoesHereText = driver.findElement(By.xpath("//p"));
