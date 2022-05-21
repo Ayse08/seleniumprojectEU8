@@ -32,7 +32,6 @@ public class T1_WindowHandling {
         ((JavascriptExecutor) driver).executeScript("window.open('http://google.com','_blank');");
         ((JavascriptExecutor) driver).executeScript("window.open('http://etsy.com','_blank');");
         ((JavascriptExecutor) driver).executeScript("window.open('http://facebook.com','_blank');");
-        //
 
         //4. Create a logic to switch to the tab where Etsy.com is open
 
@@ -52,7 +51,5 @@ public class T1_WindowHandling {
 
         Assert.assertTrue(actualTitle.contains(expectedTitle));
 
-
     }
-
 }
