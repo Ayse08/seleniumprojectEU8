@@ -52,8 +52,25 @@ public class T1_WebTable_Order_Verify {
                 (By.xpath("//table[@id='ctl00_MainContent_orderGrid']//td[.='Bob Martin']/following-sibling::td[3]"));
 
         String expectedBobDate = "12/31/2021";
-        String actualBobDate= bobMartinCell.getText();
+        String actualBobDate= bobMartinDateCell.getText();
 
         Assert.assertEquals(actualBobDate, expectedBobDate);
     }
+    // We use the utility method we created
+    @Test
+    public void test2(){
+
+        String costumerOrderDate1 = WebTableUtils.returnOrderDate(driver, "Alexandra Gray");
+        System.out.println("costumerOrderDate1 = " + costumerOrderDate1);
+
+        String costumerOrderDate2 =  WebTableUtils.returnOrderDate(driver, "John Doe");
+        System.out.println("costumerOrderDate2 = " + costumerOrderDate2);
+    }
+
+    //Using WebTableUtils.orderVerify(); method
+    @Test
+    public void test3(){
+
+    }
+
 }
