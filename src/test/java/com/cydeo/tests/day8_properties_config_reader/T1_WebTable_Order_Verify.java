@@ -57,6 +57,9 @@ public class T1_WebTable_Order_Verify {
         Assert.assertEquals(actualBobDate, expectedBobDate);
     }
     // We use the utility method we created
+
+
+
     @Test
     public void test2(){
 
@@ -70,6 +73,7 @@ public class T1_WebTable_Order_Verify {
     //Using WebTableUtils.orderVerify(); method
     @Test
     public void test3(){
+        WebTableUtils.orderVerify(driver, "Bart Fisher", "01/16/2022");
 
     }
 
