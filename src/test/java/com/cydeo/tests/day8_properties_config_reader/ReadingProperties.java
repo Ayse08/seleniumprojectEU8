@@ -24,10 +24,5 @@ public class ReadingProperties {
         System.out.println("properties.getProperty(\"env\") = " + properties.getProperty("env"));
         System.out.println("properties.getProperty(\"username\") = " + properties.getProperty("username"));
 
-
-
-
     }
-
-
 }
