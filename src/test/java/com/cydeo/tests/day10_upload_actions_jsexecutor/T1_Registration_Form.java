@@ -1,5 +1,7 @@
 package com.cydeo.tests.day10_upload_actions_jsexecutor;
 
+import com.cydeo.utilities.ConfigurationReader;
+import com.cydeo.utilities.Driver;
 import org.testng.annotations.Test;
 
 public class T1_Registration_Form {
@@ -10,6 +12,8 @@ public class T1_Registration_Form {
         //Note: Use JavaFaker OR read from configuration.properties file when possible.
         //1. Open browser
         //2. Go to website: https://practice.cydeo.com/registration_form
+        Driver.getDriver().get(ConfigurationReader.getProperty("registration.form.url"));
+
         //3. Enter first name
         //4. Enter last name
         //5. Enter username
