@@ -16,7 +16,7 @@ public class T2_Upload_Practice {
         Driver.getDriver().get("https://practice.cydeo.com/upload");
 
         //2. Find some small file from your computer, and get the path of it.
-        String path = "";
+        String path = ""; // I didn't reach to copy the path in mac
 
         //3. Upload the file.
         WebElement fileUpload = Driver.getDriver().findElement(By.id("file-upload"));
