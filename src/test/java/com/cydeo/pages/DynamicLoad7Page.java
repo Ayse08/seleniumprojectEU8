@@ -19,4 +19,5 @@ public class DynamicLoad7Page {
     @FindBy(xpath = "//img[@alt='square pants']")
     public WebElement spongeBobImage;
 
+
 }
